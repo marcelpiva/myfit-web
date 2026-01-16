@@ -27,14 +27,14 @@ export default function StickyMobileCTA() {
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          transition={{ type: "spring" as const, stiffness: 300, damping: 30 }}
           className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-background/80 backdrop-blur-xl border-t border-border/50 md:hidden"
         >
           <Link
             href="/register"
             className="flex items-center justify-center gap-2 w-full bg-primary text-primary-foreground py-4 font-semibold hover:bg-primary/90 transition-all active:scale-95"
           >
-            {t.getStartedFree}
+            {t.getStarted}
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
