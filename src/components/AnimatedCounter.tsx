@@ -62,7 +62,7 @@ export default function AnimatedCounter({
       className={className}
       initial={{ opacity: 0, scale: 0.5 }}
       animate={isInView ? { opacity: 1, scale: 1 } : {}}
-      transition={{ type: "spring", stiffness: 200, damping: 15 }}
+      transition={{ type: "spring" as const, stiffness: 200, damping: 15 }}
     >
       {prefix}{formattedCount}{suffix}
     </motion.span>
