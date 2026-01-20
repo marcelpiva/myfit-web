@@ -32,7 +32,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">2. Descrição do Serviço</h2>
             <p className="text-muted-foreground leading-relaxed">
-              myfitplatform é uma plataforma white-label que permite a profissionais de fitness
+              myfitplatform é uma plataforma completa que permite a profissionais de fitness
               (personal trainers, coaches, academias) criar e gerenciar suas próprias plataformas
               de treinamento, incluindo criação de treinos, planos alimentares, acompanhamento de
               progresso, comunicação com clientes e processamento de pagamentos.

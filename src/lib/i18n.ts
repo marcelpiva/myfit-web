@@ -11,7 +11,7 @@ export const translations = {
     getStarted: 'Começar grátis',
 
     // Hero
-    badge: 'Plataforma White-Label para Fitness',
+    badge: 'Plataforma Completa para Fitness',
     heroTitle1: 'Transforme seu negócio',
     heroTitle2: 'fitness em sucesso',
     heroSubtitle: 'Crie treinos personalizados, gerencie seus alunos e receba pagamentos. Tudo em uma única plataforma com sua marca.',
@@ -103,7 +103,7 @@ export const translations = {
     createFreeAccount: 'Criar conta grátis',
 
     // Footer
-    footerDesc: 'A plataforma white-label completa para profissionais de fitness.',
+    footerDesc: 'A plataforma completa para profissionais de fitness.',
     product: 'Produto',
     company: 'Empresa',
     aboutUs: 'Sobre nós',
@@ -225,7 +225,7 @@ export const translations = {
     getStarted: 'Get started free',
 
     // Hero
-    badge: 'White-Label Fitness Platform',
+    badge: 'Completa Fitness Platform',
     heroTitle1: 'Transform your fitness',
     heroTitle2: 'business into success',
     heroSubtitle: 'Create personalized workouts, manage your clients and receive payments. All in one platform with your brand.',
@@ -317,7 +317,7 @@ export const translations = {
     createFreeAccount: 'Create free account',
 
     // Footer
-    footerDesc: 'The complete white-label platform for fitness professionals.',
+    footerDesc: 'The complete platform for fitness professionals.',
     product: 'Product',
     company: 'Company',
     aboutUs: 'About us',
@@ -439,7 +439,7 @@ export const translations = {
     getStarted: 'Comenzar gratis',
 
     // Hero
-    badge: 'Plataforma White-Label para Fitness',
+    badge: 'Plataforma Completa para Fitness',
     heroTitle1: 'Transforma tu negocio',
     heroTitle2: 'fitness en éxito',
     heroSubtitle: 'Crea entrenamientos personalizados, gestiona tus clientes y recibe pagos. Todo en una única plataforma con tu marca.',
@@ -531,7 +531,7 @@ export const translations = {
     createFreeAccount: 'Crear cuenta gratis',
 
     // Footer
-    footerDesc: 'La plataforma white-label completa para profesionales de fitness.',
+    footerDesc: 'La plataforma completa para profesionales de fitness.',
     product: 'Producto',
     company: 'Empresa',
     aboutUs: 'Sobre nosotros',

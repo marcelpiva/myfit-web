@@ -22,7 +22,7 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "myfitplatform - Plataforma Fitness White-Label",
+  title: "myfitplatform - Plataforma Fitness Completa",
   description: "Crie sua própria plataforma de fitness em minutos. Treinos, dietas, pagamentos e muito mais.",
 };
 
