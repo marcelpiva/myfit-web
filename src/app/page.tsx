@@ -75,6 +75,28 @@ export default function Home() {
   const { t, locale, setLocale, flag } = useLocale();
   const locales: Locale[] = ['pt', 'en', 'es'];
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [langMenuOpen, setLangMenuOpen] = useState(false);
+  const langMenuRef = useRef<HTMLDivElement>(null);
+
+  // Close language menu when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (langMenuRef.current && !langMenuRef.current.contains(event.target as Node)) {
+        setLangMenuOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside as EventListener);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside as EventListener);
+    };
+  }, []);
+
+  const handleLocaleChange = (loc: Locale) => {
+    setLocale(loc);
+    setLangMenuOpen(false);
+  };
 
   // Parallax refs
   const heroRef = useRef(null);
@@ -209,23 +231,29 @@ export default function Home() {
 
             {/* Mobile Actions */}
             <div className="flex md:hidden items-center gap-2">
-              {/* Mobile Language Switcher - Flag only */}
-              <div className="relative group">
-                <button className="flex items-center text-xl p-2">
+              {/* Mobile Language Switcher - Click based */}
+              <div className="relative" ref={langMenuRef}>
+                <button
+                  onClick={() => setLangMenuOpen(!langMenuOpen)}
+                  className="flex items-center text-xl p-2"
+                  aria-label="Change language"
+                >
                   {flag}
                 </button>
-                <div className="absolute right-0 top-full mt-2 bg-card border border-border shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 min-w-[140px]">
-                  {locales.map((loc) => (
-                    <button
-                      key={loc}
-                      onClick={() => setLocale(loc)}
-                      className={`flex items-center gap-3 px-4 py-3 text-sm hover:bg-muted transition-colors w-full text-left ${locale === loc ? 'bg-muted/50' : ''}`}
-                    >
-                      <span className="text-lg">{flags[loc]}</span>
-                      {localeNames[loc]}
-                    </button>
-                  ))}
-                </div>
+                {langMenuOpen && (
+                  <div className="absolute right-0 top-full mt-2 bg-card border border-border shadow-lg z-50 min-w-[140px]">
+                    {locales.map((loc) => (
+                      <button
+                        key={loc}
+                        onClick={() => handleLocaleChange(loc)}
+                        className={`flex items-center gap-3 px-4 py-3 text-sm hover:bg-muted transition-colors w-full text-left ${locale === loc ? 'bg-muted/50' : ''}`}
+                      >
+                        <span className="text-lg">{flags[loc]}</span>
+                        {localeNames[loc]}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* Hamburger Menu Button */}
