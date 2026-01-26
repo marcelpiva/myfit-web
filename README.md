@@ -1,6 +1,6 @@
 # MyFit Web
 
-[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](../CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.2.0-blue.svg)](./CHANGELOG.md)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black.svg?logo=next.js)](https://nextjs.org)
 
 Landing page and marketing website for the MyFit platform.
@@ -11,6 +11,8 @@ Landing page and marketing website for the MyFit platform.
 - Feature showcase
 - Pricing plans
 - Contact form
+- Account deletion page (Play Store compliance)
+- Multi-language support (PT, EN, ES)
 - SEO optimized
 
 ## Tech Stack
